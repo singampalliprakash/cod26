@@ -1,0 +1,31 @@
+class CustomArrayList {
+    private int[] arr = new int[10];
+    private int size = 0;
+
+    public void add(int element) {
+        if (size == arr.length)
+        arr[size++] = element;
+    }
+
+    public void remove(int index){
+        if (index < 0 || index >= size) 
+        return 
+
+    }
+
+    public int get(int index) {
+        return (index >= 0 && index < size) ? arr[index] : -1;
+    }
+
+    public int size() {
+        return size;
+    }
+
+    public static void main(String[] args) {
+        CustomArrayList list = new CustomArrayList();
+        list.add(10);
+        list.add(20);
+        list.remove(0);
+        System.out.println(list.get(0)); 
+    }
+}
