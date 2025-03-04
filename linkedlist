@@ -1,0 +1,19 @@
+class CustomQueue {
+    private LinkedList<Integer> list = new LinkedList<>();
+
+    public void enqueue(int element) {
+        list.addLast(element);
+    }
+
+    public int dequeue() {
+        return list.isEmpty() ? -1 : list.removeFirst();
+    }
+
+    public int peek() {
+        return list.isEmpty() ? -1 : list.getFirst();
+    }
+
+    public boolean isEmpty() {
+        return list.isEmpty();
+    }
+}
